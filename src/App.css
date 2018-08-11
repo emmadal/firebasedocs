@@ -46,3 +46,10 @@ body, html {
   text-align: justify;
   padding-left: 20px;
 }
+.icones{
+  display:flex;
+  margin-top: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

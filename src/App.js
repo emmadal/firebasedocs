@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
 
-
 export default class App extends Component {
   render() {
     return (
@@ -93,13 +92,46 @@ export default class App extends Component {
           <div className="row mt-3">
             <div className="col-md-12">
               <a href="https://firebase.google.com/products/" target="_blank"                                  rel="noopener noreferrer">
-                <h3 className="h3-responsive text-center text-warning">Decouvrez plus...</h3>
+                <h3 className="h3-responsive text-center text-warning">En savoir plus sur nos                  produits...</h3>
               </a>
             </div>
           </div>
           {/* Fin Decouvrez plus */}
         </div>
+        {/*demarrez avec firebase*/}
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 mt-5">
+              <h3 className="h3-responsive text-justify">
+                Essayez Firebase gratuitement dès aujourd'hui.
+              </h3>
+              <h3 className="h3-responsive text-justify">
+                L'intégrer dans votre application est facile.
+              </h3>
+              <a href="https://console.firebase.google.com" target="_blank"                                    rel="noopener noreferrer" className="btn btn-white font-weight-bold">Demarrez</a>
+            </div>
+          </div>
+          {/*techno supportes*/}
+          <div className="row">
+            <div className="col-md-12 mt-5">
+              <h2 className="h2-responsive text-justify text-center font-weight-blod">
+                Platformes et technologies supportees
+              </h2>
+              <div className="icones">
+                <img src={require('./android-original.svg')} alt="" className="img-fluid"/>
+                <img src={require('./apple-original.svg')} alt="" className="img-fluid"/>
+                <img src={require('./angularjs-original.svg')} alt="" className="img-fluid"/>
+                <img src={require('./nodejs-original.svg')} alt="" className="img-fluid"/>
+                <img src={require('./html5-original.svg')} alt="" className="img-fluid"/>
+                <img src={require('./react-original.svg')} alt="" className="img-fluid"/>
+              </div>
 
+            </div>
+          </div>
+
+          {/* fin techno supportes */}
+        </div>
+        {/* fin demarrez avec firebase*/}
       </div>
     );
   }
