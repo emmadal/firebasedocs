@@ -1,0 +1,48 @@
+body {
+  font-family: Titillium Web,sans-serif;
+  background-image: url("./background-filter.png"),
+  linear-gradient(45deg,#459d55 15%,#006673 85%);
+  color: #fff;
+  overflow-y: scroll;
+}
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+.fire{
+  height: 100px;
+  width: 100px;
+}
+.logo{
+   margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mytitle{
+  margin-top: 25px;
+  font-weight: bold;
+}
+.titreoffres{
+  font-style: italic;
+}
+.myboard{
+  background-color: whitesmoke;
+  color:black;
+  padding: 20px;
+}
+.realtime{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 3em;
+}
+.offres{
+  text-decoration: underline;
+}
+.description{
+  text-align: justify;
+  padding-left: 20px;
+}
