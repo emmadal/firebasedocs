@@ -5,6 +5,30 @@ import 'mdbreact/dist/css/mdb.css';
 import './App.css';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email:'',
+      msg:[]
+    }
+  }
+  handleChangeMail(event){
+    this.setState({
+      email : event.target.value,
+    })
+  }
+  handleChangeMsg(event){
+    this.setState({
+      msg : event.target.value,
+    })
+  }
+  handleSubmit(){
+    console.log(`${this.state.email}, ${this.state.msg}`);
+    this.setState({
+      email:'',
+      msg:[]
+    })
+  }
   render() {
     return (
       <div>
@@ -88,6 +112,7 @@ export default class App extends Component {
             </div>
           </div>
           {/*----- fin Firebase Authentication---*/}
+
           {/*Decouvrez plus */}
           <div className="row mt-3">
             <div className="col-md-12">
@@ -98,6 +123,24 @@ export default class App extends Component {
           </div>
           {/* Fin Decouvrez plus */}
         </div>
+        {/*Nous ecrire*/}
+        <div className="container">
+          <div className="row mt-5">
+            <div className="col-md-12">
+              <h3 className="h3-responsive text-center font-weight-bold">
+                Vos suggestions
+              </h3>
+              <form onSubmit={this.handleSubmit.bind(this)} className="myform">
+                <input type="email" className="form-control" placeholder="Votre email"                           required={true} value={this.state.email}                                                       onChange={this.handleChangeMail.bind(this)}/>
+                <textarea cols="30" rows="10" className="form-control mt-4"                                      placeholder="Votre message" required={true}                                                    onChange={this.handleChangeMsg.bind(this)} value={this.state.msg}/>
+                <div className="mt-3">
+                  <a rel="noopener noreferrer" className="btn btn-white                                            font-weight-bold" onClick={this.handleSubmit.bind(this)}>Envoyer</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {/*Nous ecrire*/}
         {/*demarrez avec firebase*/}
         <div className="container">
           <div className="row">
@@ -114,18 +157,17 @@ export default class App extends Component {
           {/*techno supportes*/}
           <div className="row">
             <div className="col-md-12 mt-5">
-              <h2 className="h2-responsive text-justify text-center font-weight-blod">
+              <h2 className="h2-responsive text-center font-weight-blod">
                 Platformes et technologies supportees
               </h2>
-              <div className="icones">
-                <img src={require('./android-original.svg')} alt="" className="img-fluid"/>
-                <img src={require('./apple-original.svg')} alt="" className="img-fluid"/>
-                <img src={require('./angularjs-original.svg')} alt="" className="img-fluid"/>
-                <img src={require('./nodejs-original.svg')} alt="" className="img-fluid"/>
-                <img src={require('./html5-original.svg')} alt="" className="img-fluid"/>
-                <img src={require('./react-original.svg')} alt="" className="img-fluid"/>
+              <div className="blockicones">
+                <img src={require('./android-original.svg')} alt="" className="img-fluid icone"/>
+                <img src={require('./apple-original.svg')} alt="" className="img-fluid icone"/>
+                <img src={require('./angularjs-original.svg')} alt="" className="img-fluid                      icone"/>
+                <img src={require('./nodejs-original.svg')} alt="" className="img-fluid icone"/>
+                <img src={require('./html5-original.svg')} alt="" className="img-fluid icone"/>
+                <img src={require('./react-original.svg')} alt="" className="img-fluid icone"/>
               </div>
-
             </div>
           </div>
 

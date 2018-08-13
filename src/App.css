@@ -46,10 +46,21 @@ body, html {
   text-align: justify;
   padding-left: 20px;
 }
-.icones{
+.blockicones{
   display:flex;
   margin-top: 50px;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+.icone{
+  width: 100px;
+  height: 100px;
+}
+.myform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
